@@ -94,10 +94,15 @@ class LiteVimeoEmbed extends HTMLElement {
     }
 
     getParams() {
-        const params = new URLSearchParams(this.getAttribute('params') || []);
+        const rawParams = this.getAttribute('params') || '';
+        const [queryString, fragment] = rawParams.split('#');
+        const params = new URLSearchParams(queryString || []);
+
         params.append('autoplay', '1');
         params.append('playsinline', '1');
-        return params;
+
+        const paramsString = params.toString();
+        return paramsString + (fragment ? `#${fragment}` : '');
     }
 
     async activate() {
@@ -121,7 +126,7 @@ class LiteVimeoEmbed extends HTMLElement {
         iframeEl.allowFullscreen = true;
         // AFAIK, the encoding here isn't necessary for XSS, but we'll do it only because this is a URL
         // https://stackoverflow.com/q/64959723/89484
-        iframeEl.src = `https://player.vimeo.com/video/${encodeURIComponent(this.videoId)}?${this.getParams().toString()}`;
+        iframeEl.src = `https://player.vimeo.com/video/${encodeURIComponent(this.videoId)}?${this.getParams()}`;
         return iframeEl;
     }
 }
