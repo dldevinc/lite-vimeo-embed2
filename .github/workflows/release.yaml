@@ -16,10 +16,8 @@ jobs:
           cache: "npm"
           registry-url: "https://registry.npmjs.org"
       - name: Install NPM dependencies
-        run: yarn install
-      - name: Build NPM package
-        run: yarn build
+        run: npm install
       - name: Publish NPM package
-        run: yarn publish --access=public
+        run: npm publish --access=public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
