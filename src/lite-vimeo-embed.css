@@ -9,7 +9,7 @@ lite-vimeo {
   background-size: cover;
 }
 
-/* gradient */
+/* title */
 lite-vimeo[data-title]:not([data-title=""])::before {
   content: attr(data-title);
   position: absolute;
@@ -31,10 +31,6 @@ lite-vimeo[data-title]:not([data-title=""])::before {
   border-radius: 4px;
   box-sizing: border-box;
   background: #000000e6;
-}
-
-lite-vimeo:hover::before {
-  color: white;
 }
 
 /* responsive iframe with a 16:9 aspect ratio
