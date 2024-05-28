@@ -77,7 +77,7 @@ lite-vimeo.lvm-activated {
   cursor: unset;
 }
 
-lite-youtube.lvm-activated::before,
+lite-vimeo.lvm-activated::before,
 lite-vimeo.lvm-activated > .lvm-playbtn {
   opacity: 0;
   pointer-events: none;
