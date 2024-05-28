@@ -1,5 +1,5 @@
 {
-  "name": "lite-vimeo-embed",
+  "name": "lite-vimeo-embed2",
   "version": "0.1.0",
   "description": "A faster vimeo embed.",
   "license": "BSD-3-Clause",
@@ -7,7 +7,7 @@
   "style": "src/lite-vimeo-embed.css",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dldevinc/lite-vimeo-embed.git"
+    "url": "git+https://github.com/dldevinc/lite-vimeo-embed2.git"
   },
   "keywords": [
     "vimeo",
@@ -16,9 +16,9 @@
   ],
   "author": "Mihail Mishakin <x896321475@gmail.com>",
   "bugs": {
-    "url": "https://github.com/dldevinc/lite-vimeo-embed/issues"
+    "url": "https://github.com/dldevinc/lite-vimeo-embed2/issues"
   },
-  "homepage": "https://github.com/dldevinc/lite-vimeo-embed",
+  "homepage": "https://github.com/dldevinc/lite-vimeo-embed2",
   "files": [
     "src/**",
     "package.json",

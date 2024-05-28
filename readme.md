@@ -1,113 +1,75 @@
-# Lite YouTube Embed [![NPM lite-youtube-embed package](https://img.shields.io/npm/v/lite-youtube-embed.svg)](https://npmjs.org/package/lite-youtube-embed)
+> 🙋 Using YouTube? Check out the original [lite-youtube-embed](https://github.com/paulirish/lite-youtube-embed).
+
+# Lite Vimeo Embed [![NPM lite-vimeo-embed2 package](https://img.shields.io/npm/v/lite-vimeo-embed2.svg)](https://npmjs.org/package/lite-vimeo-embed2)
 
 > #### Renders faster than a sneeze.
 
 Provide videos with a supercharged focus on visual performance.
 This custom element renders just like the real thing but approximately 224× faster.
 
-Demo: https://paulirish.github.io/lite-youtube-embed/
+Demo: https://dldevinc.github.io/lite-vimeo-embed2/
 
 ## Comparison
 
-| Normal `<iframe>` YouTube embed |  `lite-youtube` |
-|---|---|
-|  ![Screen Shot 2019-11-03 at 5 23 50 PM](https://user-images.githubusercontent.com/39191/68095560-5c930d00-fe5f-11e9-8104-e73e77a21287.png)   ![Screen Shot 2019-11-03 at 5 21 05 PM](https://user-images.githubusercontent.com/39191/68095562-5d2ba380-fe5f-11e9-8b5f-18f451b0716d.png)  ![Screen Shot 2019-11-03 at 5 19 35 PM](https://user-images.githubusercontent.com/39191/68095565-5d2ba380-fe5f-11e9-835d-85d37df71f52.png)  | ![Screen Shot 2019-11-03 at 5 23 27 PM](https://user-images.githubusercontent.com/39191/68095561-5d2ba380-fe5f-11e9-9393-e2206a64c8bf.png) ![Screen Shot 2019-11-03 at 5 20 55 PM](https://user-images.githubusercontent.com/39191/68095563-5d2ba380-fe5f-11e9-8f9a-f5c4a774cd56.png)  ![Screen Shot 2019-11-03 at 5 20 16 PM](https://user-images.githubusercontent.com/39191/68095564-5d2ba380-fe5f-11e9-908f-7e12eab8b2ad.png) |
+| Normal `<iframe>` Vimeo embed                                                                                                                                                                                                                                                                                                                                                                                                       | `lite-vimeo-embed`                                                                                                                                                                                                                                                                                                                                                                                                                |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ![Screen Shot 2019-11-03 at 5 23 50 PM](https://user-images.githubusercontent.com/39191/68095560-5c930d00-fe5f-11e9-8104-e73e77a21287.png)   ![Screen Shot 2019-11-03 at 5 21 05 PM](https://user-images.githubusercontent.com/39191/68095562-5d2ba380-fe5f-11e9-8b5f-18f451b0716d.png)  ![Screen Shot 2019-11-03 at 5 19 35 PM](https://user-images.githubusercontent.com/39191/68095565-5d2ba380-fe5f-11e9-835d-85d37df71f52.png) | ![Screen Shot 2019-11-03 at 5 23 27 PM](https://user-images.githubusercontent.com/39191/68095561-5d2ba380-fe5f-11e9-9393-e2206a64c8bf.png) ![Screen Shot 2019-11-03 at 5 20 55 PM](https://user-images.githubusercontent.com/39191/68095563-5d2ba380-fe5f-11e9-8f9a-f5c4a774cd56.png)  ![Screen Shot 2019-11-03 at 5 20 16 PM](https://user-images.githubusercontent.com/39191/68095564-5d2ba380-fe5f-11e9-908f-7e12eab8b2ad.png) |
 
 ## Basic usage
 
-Use the [`lite-youtube-embed` npm package](https://www.npmjs.com/package/lite-youtube-embed) or download from this repo and use `src/`.
+Use the [`lite-vimeo-embed2` npm package](https://www.npmjs.com/package/lite-vimeo-embed2) or download from this repo and use `src/`.
 
 To use the custom element you will need to:
 
 1. Include the stylesheet within your application
 1. Include the script as well
-1. Use the `lite-youtube` tag via HTML or JS.
+1. Use the `lite-vimeo` tag via HTML or JS.
 1. Be happy that you're providing a better user experience to your visitors
 
 ```html
-<!-- Include the CSS & JS.. (This could be direct from the package or bundled) -->
-<link rel="stylesheet" href="node_modules/lite-youtube-embed/src/lite-yt-embed.css" />
+<!-- Include the CSS & JS. (This could be direct from the package or bundled) -->
+<link rel="stylesheet" href="node_modules/lite-vimeo-embed2/src/lite-vimeo-embed.css" />
 
-<script src="node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script>
+<script src="node_modules/lite-vimeo-embed2/src/lite-vimeo-embed.js"></script>
 
-<!-- Use the element. You may use it before the lite-yt-embed JS is executed. -->
-<lite-youtube videoid="ogfYd705cRs" playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
+<!-- Use the element. You may use it before the lite-vimeo-embed2 JS is executed. -->
+<lite-vimeo videoid="347119375" playlabel="Play: Sample Video"></lite-vimeo>
 ```
-
-<br>
-
-Privacy note: lite-youtube uses youtube-nocookie.com instead of youtube.com in order
-to be more privacy friendly for end users.
 
 ## Pro-usage: load w/ JS deferred (aka progressive enhancement)
 
 Use this as your HTML, load the script asynchronously, and let the JS progressively enhance it.
 
 ```html
-<lite-youtube videoid="ogfYd705cRs" style="background-image: url('https://i.ytimg.com/vi/ogfYd705cRs/hqdefault.jpg');">
-  <a href="https://youtube.com/watch?v=ogfYd705cRs" class="lty-playbtn" title="Play Video">
-    <span class="lyt-visually-hidden">Play Video: Keynote (Google I/O '18)</span>
+<lite-vimeo videoid="347119375" style="background-image: url('https://i.vimeocdn.com/video/797382244-0106ae13e902e09d0f02d8f404fa80581f38d1b8b7846b3f8e87ef391ffb8c99-d_640');">
+  <a href="https://vimeo.com/347119375" class="lvm-playbtn" title="Play Video">
+    <span class="lvm-visually-hidden">Play Video: Sample Video</span>
   </a>
-</lite-youtube>
+</lite-vimeo>
 ```
 
-[Demo: progressive enhancement](https://paulirish.github.io/lite-youtube-embed/variants/pe.html)
-
-## Custom poster image
-
-If you want to provide a custom poster image, just set it as the background-image, and lite-yt will not overwrite it:
-```html
-<lite-youtube videoid="ogfYd705cRs" style="background-image: url('https://i.ytimg.com/vi/ogfYd705cRs/hqdefault.jpg');"></lite-youtube>
-```
-
-Use [poster-image-availability.html](https://paulirish.github.io/lite-youtube-embed/testpage/poster-image-availability.html) to determine what poster images are available for you.
-
-## Access the YouTube Iframe Player API
-
-Use the `js-api` param: `<lite-youtube videoid="ogfYd705cRs" js-api>`.. Then you can use [IFrame Player API](https://developers.google.com/youtube/iframe_api_reference):
-
-```js
-const player = await document.querySelector('lite-youtube').getYTPlayer();
-player.seekTo(15); // jump to 15 seconds
-```
-
-[Demo: Iframe Player API usage](https://paulirish.github.io/lite-youtube-embed/variants/js-api.html)
+[Demo: progressive enhancement](https://dldevinc.github.io/lite-vimeo-embed2/variants/pe.html)
 
 ## Add a video title
 
 If you want to display a title prior to loading the full embed, set the `title` attribute:
 ```html
-<lite-youtube videoid="ogfYd705cRs" title="Keynote (Google I/O '18)"></lite-youtube>
+<lite-vimeo videoid="347119375" title="Sample Video"></lite-vimeo>
 ```
 
-[Demo: visible title](https://paulirish.github.io/lite-youtube-embed/variants/title.html)
+[Demo: visible title](https://dldevinc.github.io/lite-vimeo-embed2/variants/title.html)
 
 ### Custom Player Parameters
 
-YouTube supports a variety of [player parameters](https://developers.google.com/youtube/player_parameters#Parameters) to control the iframe's behavior and appearance.
-These may be applied by using the `params` attribute.
+Vimeo supports a variety of [player parameters](https://help.vimeo.com/hc/en-us/articles/12426260232977-Player-parameters-overview)
+to control the iframe's behavior and appearance. These may be applied by using the `params` attribute.
 
 ```html
 <!-- Example to show a video player without controls, starting at 10s in, ending at 20s,
      with modest branding *and* enabling the JS API -->
-<lite-youtube videoid="ogfYd705cRs" params="controls=0&start=10&end=30&modestbranding=2&rel=0&enablejsapi=1"></lite-youtube>
+<lite-vimeo videoid="347119375" params="controls=0&loop=1#t=10s"></lite-vimeo>
 ```
 
-Note that lite-youtube uses `autoplay=1` by default.
+Note that lite-vimeo uses `autoplay=1` by default.
 
-[Demo: Custom player parameters](https://paulirish.github.io/lite-youtube-embed/variants/params.html)
-
-## Other fast YouTube embeds
-
-* &lt;lite-youtube&gt; using shadow DOM: [`justinribeiro/lite-youtube`](https://github.com/justinribeiro/lite-youtube) :+1:
-* React port 1: [`ibrahimcesar/react-lite-youtube-embed`](https://github.com/ibrahimcesar/react-lite-youtube-embed)
-* React port 2: [`kylemocode/react-lite-yt-embed`](https://github.com/kylemocode/react-lite-yt-embed)
-* React wrapper: [`@next/third-parties`](https://github.com/vercel/next.js/tree/canary/packages/third-parties#youtube-embed)
-* Vue port: [`andrewvasilchuk/vue-lazy-youtube-video`](https://github.com/andrewvasilchuk/vue-lazy-youtube-video)
-
-## Other [third-party facades](https://web.dev/third-party-facades/)
-
-* Lite Vimeo Embed: [`luwes/lite-vimeo-embed`](https://github.com/luwes/lite-vimeo-embed)
-* &lt;lite-vimeo&gt;: [`slightlyoff/lite-vimeo`](https://github.com/slightlyoff/lite-vimeo)
-* React Live Chat Loader (Intercom, Help Scout, Drift, Facebook Messenger): [`calibreapp/react-live-chat-loader`](https://github.com/calibreapp/react-live-chat-loader)
-* Intercom chat facade: [`danielbachhuber/intercom-facade/`](https://github.com/danielbachhuber/intercom-facade/)
+[Demo: Custom player parameters](https://dldevinc.github.io/lite-vimeo-embed2/variants/params.html)
