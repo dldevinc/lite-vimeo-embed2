@@ -4,7 +4,7 @@
     <title>lite-vimeo-embed2 - progressively enhanced</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../src/lite-vimeo-embed.css" />
+    <link rel="stylesheet" href="../../src/lite-vimeo-embed.css" />
   </head>
   <body>
     <h1>Progressively Enhanced</h1>
@@ -22,7 +22,7 @@
         // artificial delay somewhat simulates a script[defer]
         setTimeout(_ => {
             const elem = document.createElement('script');
-            elem.src = '../src/lite-vimeo-embed.js';
+            elem.src = '../../src/lite-vimeo-embed.js';
             document.head.append(elem);
 
             document.querySelector('#done').textContent = 'Script complete.'

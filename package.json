@@ -1,6 +1,6 @@
 {
   "name": "lite-vimeo-embed2",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A faster vimeo embed.",
   "license": "BSD-3-Clause",
   "main": "src/lite-vimeo-embed.js",
