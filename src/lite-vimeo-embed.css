@@ -30,7 +30,7 @@ lite-vimeo[data-title]:not([data-title=""])::before {
   text-overflow: ellipsis;
   border-radius: 4px;
   box-sizing: border-box;
-  background: #000000e6;
+  background: rgb(0, 0, 0, 0.9);
 }
 
 /* responsive iframe with a 16:9 aspect ratio
@@ -67,8 +67,8 @@ lite-vimeo > .lvm-playbtn {
   border: 0;
 }
 
-lite-vimeo:hover > .lvm-playbtn,
-lite-vimeo .lvm-playbtn:focus {
+lite-vimeo > .lvm-playbtn:hover,
+lite-vimeo > .lvm-playbtn:focus {
   filter: none;
 }
 
